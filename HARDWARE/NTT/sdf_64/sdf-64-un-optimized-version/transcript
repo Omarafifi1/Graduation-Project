@@ -1,0 +1,149 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# OpenFile D:/study/digital/gp/NTT/HARDWARE/SDF/sdf_64_unopt/barret_reduction.v 
+vlib work
+vlog -reportprogress 300 -work work D:/study/digital/gp/NTT/HARDWARE/SDF/sdf_64_unopt/barret_reduction.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module barret_reduction
+# 
+# Top level modules:
+# 	barret_reduction
+vlog -reportprogress 300 -work work D:/study/digital/gp/NTT/HARDWARE/SDF/sdf_64_unopt/butter_fly_unit.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module bfu
+# 
+# Top level modules:
+# 	bfu
+vlog -reportprogress 300 -work work D:/study/digital/gp/NTT/HARDWARE/SDF/sdf_64_unopt/ctr_unit.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module control_unit
+# 
+# Top level modules:
+# 	control_unit
+vlog -reportprogress 30 -work work D:/study/digital/gp/NTT/HARDWARE/SDF/sdf_64_unopt/delay_buffer.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module delay_buffer
+# 
+# Top level modules:
+# 	delay_buffer
+vlog -reportprogress 30 -work work D:/study/digital/gp/NTT/HARDWARE/SDF/sdf_64_unopt/mod_add_reduction.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mod_addition_reduction
+# 
+# Top level modules:
+# 	mod_addition_reduction
+vlog -reportprogress 30 -work work D:/study/digital/gp/NTT/HARDWARE/SDF/sdf_64_unopt/mod_subtraction_reduction.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mod_subtraction_reduction
+# 
+# Top level modules:
+# 	mod_subtraction_reduction
+vlog -reportprogress 30 -work work D:/study/digital/gp/NTT/HARDWARE/SDF/sdf_64_unopt/mux.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux
+# 
+# Top level modules:
+# 	mux
+vlog -reportprogress 30 -work work D:/study/digital/gp/NTT/HARDWARE/SDF/sdf_64_unopt/sdf_single_stage.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module sdf_single_stage
+# 
+# Top level modules:
+# 	sdf_single_stage
+vlog -reportprogress 30 -work work D:/study/digital/gp/NTT/HARDWARE/SDF/sdf_64_unopt/sdf_top_module.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module sdf_top
+# 
+# Top level modules:
+# 	sdf_top
+vlog -reportprogress 30 -work work D:/study/digital/gp/NTT/HARDWARE/SDF/sdf_64_unopt/sdf_top_module_tb.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module sdf_tb
+# 
+# Top level modules:
+# 	sdf_tb
+vlog -reportprogress 30 -work work D:/study/digital/gp/NTT/HARDWARE/SDF/sdf_64_unopt/tw_factor_rom.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tw_factor_rom
+# 
+# Top level modules:
+# 	tw_factor_rom
+vsim -gui work.sdf_tb
+# vsim -gui work.sdf_tb 
+# Loading work.sdf_tb
+# Loading work.sdf_top
+# Loading work.control_unit
+# Loading work.tw_factor_rom
+# Loading work.sdf_single_stage
+# Loading work.bfu
+# Loading work.barret_reduction
+# Loading work.mod_addition_reduction
+# Loading work.mod_subtraction_reduction
+# Loading work.mux
+# Loading work.delay_buffer
+add wave -position insertpoint sim:/sdf_tb/*
+run -all
+# test case           1 succeeded : expected ==>                 4144 , got==>                 4144 
+# test case           2 succeeded : expected ==>                 3664 , got==>                 3664 
+# test case           3 succeeded : expected ==>                 5244 , got==>                 5244 
+# test case           4 succeeded : expected ==>                 3685 , got==>                 3685 
+# test case           5 succeeded : expected ==>                 5155 , got==>                 5155 
+# test case           6 succeeded : expected ==>                 3682 , got==>                 3682 
+# test case           7 succeeded : expected ==>                 5915 , got==>                 5915 
+# test case           8 succeeded : expected ==>                 6088 , got==>                 6088 
+# test case           9 succeeded : expected ==>                 1588 , got==>                 1588 
+# test case          10 succeeded : expected ==>                 4793 , got==>                 4793 
+# test case          11 succeeded : expected ==>                 2310 , got==>                 2310 
+# test case          12 succeeded : expected ==>                 6031 , got==>                 6031 
+# test case          13 succeeded : expected ==>                 3990 , got==>                 3990 
+# test case          14 succeeded : expected ==>                 7604 , got==>                 7604 
+# test case          15 succeeded : expected ==>                 3480 , got==>                 3480 
+# test case          16 succeeded : expected ==>                 1150 , got==>                 1150 
+# test case          17 succeeded : expected ==>                 1005 , got==>                 1005 
+# test case          18 succeeded : expected ==>                 5377 , got==>                 5377 
+# test case          19 succeeded : expected ==>                 2188 , got==>                 2188 
+# test case          20 succeeded : expected ==>                 3832 , got==>                 3832 
+# test case          21 succeeded : expected ==>                 5057 , got==>                 5057 
+# test case          22 succeeded : expected ==>                 3679 , got==>                 3679 
+# test case          23 succeeded : expected ==>                 4568 , got==>                 4568 
+# test case          24 succeeded : expected ==>                 6449 , got==>                 6449 
+# test case          25 succeeded : expected ==>                 3113 , got==>                 3113 
+# test case          26 succeeded : expected ==>                 2538 , got==>                 2538 
+# test case          27 succeeded : expected ==>                 1752 , got==>                 1752 
+# test case          28 succeeded : expected ==>                 5873 , got==>                 5873 
+# test case          29 succeeded : expected ==>                 2097 , got==>                 2097 
+# test case          30 succeeded : expected ==>                  209 , got==>                  209 
+# test case          31 succeeded : expected ==>                 2943 , got==>                 2943 
+# test case          32 succeeded : expected ==>                 2942 , got==>                 2942 
+# test case          33 succeeded : expected ==>                 4272 , got==>                 4272 
+# test case          34 succeeded : expected ==>                 6781 , got==>                 6781 
+# test case          35 succeeded : expected ==>                  295 , got==>                  295 
+# test case          36 succeeded : expected ==>                  540 , got==>                  540 
+# test case          37 succeeded : expected ==>                 6159 , got==>                 6159 
+# test case          38 succeeded : expected ==>                 6494 , got==>                 6494 
+# test case          39 succeeded : expected ==>                 4249 , got==>                 4249 
+# test case          40 succeeded : expected ==>                 2927 , got==>                 2927 
+# test case          41 succeeded : expected ==>                 6160 , got==>                 6160 
+# test case          42 succeeded : expected ==>                 6626 , got==>                 6626 
+# test case          43 succeeded : expected ==>                 6839 , got==>                 6839 
+# test case          44 succeeded : expected ==>                 3318 , got==>                 3318 
+# test case          45 succeeded : expected ==>                 3531 , got==>                 3531 
+# test case          46 succeeded : expected ==>                 7022 , got==>                 7022 
+# test case          47 succeeded : expected ==>                 2635 , got==>                 2635 
+# test case          48 succeeded : expected ==>                 2785 , got==>                 2785 
+# test case          49 succeeded : expected ==>                 5282 , got==>                 5282 
+# test case          50 succeeded : expected ==>                 1466 , got==>                 1466 
+# test case          51 succeeded : expected ==>                 7103 , got==>                 7103 
+# test case          52 succeeded : expected ==>                 6327 , got==>                 6327 
+# test case          53 succeeded : expected ==>                  932 , got==>                  932 
+# test case          54 succeeded : expected ==>                  384 , got==>                  384 
+# test case          55 succeeded : expected ==>                 4590 , got==>                 4590 
+# test case          56 succeeded : expected ==>                 4253 , got==>                 4253 
+# test case          57 succeeded : expected ==>                 1629 , got==>                 1629 
+# test case          58 succeeded : expected ==>                 3685 , got==>                 3685 
+# test case          59 succeeded : expected ==>                 4531 , got==>                 4531 
+# test case          60 succeeded : expected ==>                 4943 , got==>                 4943 
+# test case          61 succeeded : expected ==>                 5811 , got==>                 5811 
+# test case          62 succeeded : expected ==>                 1532 , got==>                 1532 
+# test case          63 succeeded : expected ==>                 5906 , got==>                 5906 
+# test case          64 succeeded : expected ==>                 2385 , got==>                 2385 
+# Break in Module sdf_tb at D:/study/digital/gp/NTT/HARDWARE/SDF/sdf_64_unopt/sdf_top_module_tb.v line 50

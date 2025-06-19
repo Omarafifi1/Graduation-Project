@@ -1,0 +1,109 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# OpenFile D:/study/digital/gp/NTT/HARDWARE/NTT/sdf_16/sdf-16-un-optimized-version/sdf_top_module_tb.v 
+vsim -gui work.sdf_tb
+# vsim -gui work.sdf_tb 
+# Loading work.sdf_tb
+# Loading work.sdf_top
+# Loading work.control_unit
+# Loading work.tw_factor_rom
+# Loading work.sdf_single_stage
+# Loading work.bfu
+# Loading work.barret_reduction
+# Loading work.mod_addition_reduction
+# Loading work.mod_subtraction_reduction
+# Loading work.mux
+# Loading work.delay_buffer
+add wave -position insertpoint sim:/sdf_tb/*
+run -all
+# ** Warning: (vsim-7) Failed to open readmem file "expected_sdf_out.txt" in read mode.
+# 
+# No such file or directory. (errno = ENOENT)    : D:/study/digital/gp/NTT/HARDWARE/NTT/sdf_16/sdf-16-un-optimized-version/sdf_top_module_tb.v(36)
+#    Time: 0 ps  Iteration: 0  Instance: /sdf_tb
+# Break in Module sdf_tb at D:/study/digital/gp/NTT/HARDWARE/NTT/sdf_16/sdf-16-un-optimized-version/sdf_top_module_tb.v line 46
+# Load canceled
+vlog -reportprogress 300 -work work D:/study/digital/gp/NTT/HARDWARE/NTT/sdf_16/sdf-16-un-optimized-version/barret_reduction.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module barret_reduction
+# 
+# Top level modules:
+# 	barret_reduction
+vlog -reportprogress 300 -work work D:/study/digital/gp/NTT/HARDWARE/NTT/sdf_16/sdf-16-un-optimized-version/butter_fly_unit.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module bfu
+# 
+# Top level modules:
+# 	bfu
+vlog -reportprogress 300 -work work D:/study/digital/gp/NTT/HARDWARE/NTT/sdf_16/sdf-16-un-optimized-version/ctr_unit.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module control_unit
+# 
+# Top level modules:
+# 	control_unit
+vlog -reportprogress 300 -work work D:/study/digital/gp/NTT/HARDWARE/NTT/sdf_16/sdf-16-un-optimized-version/delay_buffer.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module delay_buffer
+# 
+# Top level modules:
+# 	delay_buffer
+vlog -reportprogress 300 -work work D:/study/digital/gp/NTT/HARDWARE/NTT/sdf_16/sdf-16-un-optimized-version/mod_add_reduction.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mod_addition_reduction
+# 
+# Top level modules:
+# 	mod_addition_reduction
+vlog -reportprogress 300 -work work D:/study/digital/gp/NTT/HARDWARE/NTT/sdf_16/sdf-16-un-optimized-version/mod_subtraction_reduction.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mod_subtraction_reduction
+# 
+# Top level modules:
+# 	mod_subtraction_reduction
+vlog -reportprogress 300 -work work D:/study/digital/gp/NTT/HARDWARE/NTT/sdf_16/sdf-16-un-optimized-version/mux.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux
+# 
+# Top level modules:
+# 	mux
+vlog -reportprogress 300 -work work D:/study/digital/gp/NTT/HARDWARE/NTT/sdf_16/sdf-16-un-optimized-version/sdf_single_stage.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module sdf_single_stage
+# 
+# Top level modules:
+# 	sdf_single_stage
+vlog -reportprogress 300 -work work D:/study/digital/gp/NTT/HARDWARE/NTT/sdf_16/sdf-16-un-optimized-version/sdf_top_module.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module sdf_top
+# 
+# Top level modules:
+# 	sdf_top
+vlog -reportprogress 300 -work work D:/study/digital/gp/NTT/HARDWARE/NTT/sdf_16/sdf-16-un-optimized-version/sdf_top_module_tb.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module sdf_tb
+# 
+# Top level modules:
+# 	sdf_tb
+vlog -reportprogress 300 -work work D:/study/digital/gp/NTT/HARDWARE/NTT/sdf_16/sdf-16-un-optimized-version/tw_factor_rom.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tw_factor_rom
+# 
+# Top level modules:
+# 	tw_factor_rom
+vsim -gui work.sdf_tb
+# vsim -gui work.sdf_tb 
+# Loading work.sdf_tb
+# Loading work.sdf_top
+# Loading work.control_unit
+# Loading work.tw_factor_rom
+# Loading work.sdf_single_stage
+# Loading work.bfu
+# Loading work.barret_reduction
+# Loading work.mod_addition_reduction
+# Loading work.mod_subtraction_reduction
+# Loading work.mux
+# Loading work.delay_buffer
+add wave -position insertpoint sim:/sdf_tb/*
+run -all
+# ** Warning: (vsim-7) Failed to open readmem file "expected_sdf_out.txt" in read mode.
+# 
+# No such file or directory. (errno = ENOENT)    : D:/study/digital/gp/NTT/HARDWARE/NTT/sdf_16/sdf-16-un-optimized-version/sdf_top_module_tb.v(36)
+#    Time: 0 ps  Iteration: 0  Instance: /sdf_tb
+# Break in Module sdf_tb at D:/study/digital/gp/NTT/HARDWARE/NTT/sdf_16/sdf-16-un-optimized-version/sdf_top_module_tb.v line 46

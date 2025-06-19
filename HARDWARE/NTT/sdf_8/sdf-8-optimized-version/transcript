@@ -1,0 +1,138 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# OpenFile D:/study/digital/gp/NTT/HARDWARE/SDF/sdf_8/sdf-8-optimized-version/sdf_top_module_tb.v 
+do do.txt
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module barret_reduction
+# -- Compiling module bfu
+# -- Compiling module control_unit
+# -- Compiling module delay_buffer
+# -- Compiling module mod_addition_reduction
+# -- Compiling module mod_subtraction_reduction
+# -- Compiling module mux
+# -- Compiling module sdf_single_stage
+# -- Compiling module sdf_top
+# -- Compiling module tw_factor_rom
+# ** Error: tw_factor_rom.v(8): near "end": syntax error, unexpected end, expecting ';'
+# ** Error: C:/altera/13.0sp1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./do.txt line 2
+# C:/altera/13.0sp1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -f source_file.txt"
+do do.txt
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module barret_reduction
+# -- Compiling module bfu
+# -- Compiling module control_unit
+# -- Compiling module delay_buffer
+# -- Compiling module mod_addition_reduction
+# -- Compiling module mod_subtraction_reduction
+# -- Compiling module mux
+# -- Compiling module sdf_single_stage
+# -- Compiling module sdf_top
+# -- Compiling module tw_factor_rom
+# 
+# Top level modules:
+# 	sdf_top
+# vsim -voptargs=+accs work.sdf_tb 
+# Loading work.sdf_tb
+# Loading work.sdf_top
+# Loading work.control_unit
+# Loading work.tw_factor_rom
+# Loading work.sdf_single_stage
+# Loading work.bfu
+# Loading work.barret_reduction
+# Loading work.mod_addition_reduction
+# Loading work.mod_subtraction_reduction
+# Loading work.mux
+# Loading work.delay_buffer
+# Break in Module sdf_tb at D:/study/digital/gp/NTT/HARDWARE/SDF/sdf_8/sdf_top_module_tb.v line 46
+# Simulation Breakpoint: Break in Module sdf_tb at D:/study/digital/gp/NTT/HARDWARE/SDF/sdf_8/sdf_top_module_tb.v line 46
+# MACRO ./do.txt PAUSED at line 5
+do do.txt
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module barret_reduction
+# -- Compiling module bfu
+# -- Compiling module control_unit
+# -- Compiling module delay_buffer
+# -- Compiling module mod_addition_reduction
+# -- Compiling module mod_subtraction_reduction
+# -- Compiling module mux
+# -- Compiling module sdf_single_stage
+# -- Compiling module sdf_top
+# -- Compiling module tw_factor_rom
+# ** Error: tw_factor_rom.v(3): near "output": syntax error, unexpected output, expecting ')'
+# ** Error: C:/altera/13.0sp1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./do.txt line 2
+# C:/altera/13.0sp1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -f source_file.txt"
+do do.txt
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module barret_reduction
+# -- Compiling module bfu
+# -- Compiling module control_unit
+# -- Compiling module delay_buffer
+# -- Compiling module mod_addition_reduction
+# -- Compiling module mod_subtraction_reduction
+# -- Compiling module mux
+# -- Compiling module sdf_single_stage
+# -- Compiling module sdf_top
+# -- Compiling module tw_factor_rom
+# 
+# Top level modules:
+# 	sdf_top
+# vsim -voptargs=+accs work.sdf_tb 
+# Loading work.sdf_tb
+# Loading work.sdf_top
+# Loading work.control_unit
+# Loading work.tw_factor_rom
+# Loading work.sdf_single_stage
+# Loading work.bfu
+# Loading work.barret_reduction
+# Loading work.mod_addition_reduction
+# Loading work.mod_subtraction_reduction
+# Loading work.mux
+# Loading work.delay_buffer
+# Break in Module sdf_tb at D:/study/digital/gp/NTT/HARDWARE/SDF/sdf_8/sdf_top_module_tb.v line 46
+# Simulation Breakpoint: Break in Module sdf_tb at D:/study/digital/gp/NTT/HARDWARE/SDF/sdf_8/sdf_top_module_tb.v line 46
+# MACRO ./do.txt PAUSED at line 5
+do do.txt
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module barret_reduction
+# -- Compiling module bfu
+# -- Compiling module control_unit
+# -- Compiling module delay_buffer
+# -- Compiling module mod_addition_reduction
+# -- Compiling module mod_subtraction_reduction
+# -- Compiling module mux
+# -- Compiling module sdf_single_stage
+# -- Compiling module sdf_top
+# -- Compiling module tw_factor_rom
+# 
+# Top level modules:
+# 	sdf_top
+# vsim -voptargs=+accs work.sdf_tb 
+# Loading work.sdf_tb
+# Loading work.sdf_top
+# Loading work.control_unit
+# Loading work.tw_factor_rom
+# Loading work.sdf_single_stage
+# Loading work.bfu
+# Loading work.barret_reduction
+# Loading work.mod_addition_reduction
+# Loading work.mod_subtraction_reduction
+# Loading work.mux
+# Loading work.delay_buffer
+# Break in Module sdf_tb at D:/study/digital/gp/NTT/HARDWARE/SDF/sdf_8/sdf_top_module_tb.v line 46
+# Simulation Breakpoint: Break in Module sdf_tb at D:/study/digital/gp/NTT/HARDWARE/SDF/sdf_8/sdf_top_module_tb.v line 46
+# MACRO ./do.txt PAUSED at line 5

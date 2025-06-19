@@ -1,0 +1,233 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\study\digital\gp\NTT\HARDWARE\SDF\sdf_8
+vbarret_reduction
+!i10b 1
+Z1 !s100 ]1[FRABdQ89ekJ>HYM7Mg0
+Z2 ITDic8PRCadHIVKo6h@2E22
+Z3 VizlKkg`fM_9Z;h1NkCBBZ2
+Z4 dD:\study\digital\gp\NTT\HARDWARE\SDF\sdf_8\sdf-8-optimized-version
+Z5 w1741304466
+Z6 8barret_reduction.v
+Z7 Fbarret_reduction.v
+L0 1
+Z8 OV;L;10.1d;51
+r1
+!s85 0
+31
+Z9 !s108 1741554120.650000
+Z10 !s107 tw_factor_rom.v|sdf_top_module.v|sdf_single_stage.v|mux.v|mod_subtraction_reduction.v|mod_add_reduction.v|delay_buffer.v|ctr_unit.v|butter_fly_unit.v|barret_reduction.v|
+Z11 !s90 -reportprogress|300|-f|source_file.txt|
+!s101 -O0
+o-O0
+vbarret_tb
+Z12 !s100 >U8l10nSkEH2QzW77XbYm2
+Z13 I5JmHSzj985:o2naAh?;9M2
+Z14 VH1n==S<5Um1AaCRd^b[;42
+Z15 dD:\study\digital\gp\NTT\HARDWARE\SDF\sdf_8
+Z16 w1741291861
+Z17 8D:/study/digital/gp/NTT/HARDWARE/SDF/sdf_8/barret_tb.v
+Z18 FD:/study/digital/gp/NTT/HARDWARE/SDF/sdf_8/barret_tb.v
+L0 1
+R8
+r1
+31
+Z19 !s90 -reportprogress|300|-work|work|D:/study/digital/gp/NTT/HARDWARE/SDF/sdf_8/barret_tb.v|
+Z20 o-work work -O0
+Z21 !s108 1741300216.131000
+Z22 !s107 D:/study/digital/gp/NTT/HARDWARE/SDF/sdf_8/barret_tb.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vbfu
+!i10b 1
+Z23 !s100 5=BzCM<FPzzB0PzE7UT:?2
+Z24 IMIoD^0]LN;W6MYBSIY`Wb2
+Z25 Vb;7Q8TUf?A3zH^fjR08f=1
+R4
+Z26 w1741301939
+Z27 8butter_fly_unit.v
+Z28 Fbutter_fly_unit.v
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+o-O0
+vcontrol_unit
+!i10b 1
+Z29 !s100 ^M=oINIL`5P4JEBeUYFDn3
+Z30 IhH5S:bH]YXRM0Yj5?l:e[3
+Z31 V[^HldV^bYeLb`EDZXbIQa1
+R4
+Z32 w1741300424
+Z33 8ctr_unit.v
+Z34 Fctr_unit.v
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+o-O0
+vdelay_buffer
+!i10b 1
+Z35 !s100 ?[c2<aPb6AzLYHTOAibhH1
+Z36 Izn3CI_5lj6Z2c^ldkh4FN1
+Z37 V`G49dKToZlPI;KXWalUWi3
+R4
+Z38 w1741291648
+Z39 8delay_buffer.v
+Z40 Fdelay_buffer.v
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+o-O0
+vmod_addition_reduction
+!i10b 1
+Z41 !s100 6ff10CO=;I6TS3J<oBTBW3
+Z42 I8M?oL[gYWjZa<[[j<n]hY2
+Z43 VLJH::biDh6K?I36bHn2ll3
+R4
+Z44 w1739750020
+Z45 8mod_add_reduction.v
+Z46 Fmod_add_reduction.v
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+o-O0
+vmod_subtraction_reduction
+!i10b 1
+Z47 !s100 G2dhY`Z?i^Lhg5G79oFbh0
+Z48 IL4hmh89NFAXUz>VS2Lm`b2
+Z49 VDD;?JEeT:`fFe>mR]h45U3
+R4
+Z50 w1739750002
+Z51 8mod_subtraction_reduction.v
+Z52 Fmod_subtraction_reduction.v
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+o-O0
+vmux
+!i10b 1
+Z53 !s100 on?CXe:JIAa7RIOa1k;<`1
+Z54 IofhF=S6C:S4ePfFfneY510
+Z55 V22f6bmDj<TdMk[nOjK7U`1
+R4
+Z56 w1739718118
+Z57 8mux.v
+Z58 Fmux.v
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+o-O0
+vsdf_single_stage
+!i10b 1
+Z59 !s100 2BDzgY:X8g2BXfW5[_VN70
+Z60 I_PUi[WMF37XMG<If?9`0H3
+Z61 VAPD>5=X7X109TkMSZFD]02
+R4
+Z62 w1741291895
+Z63 8sdf_single_stage.v
+Z64 Fsdf_single_stage.v
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+o-O0
+vsdf_tb
+Z65 !s100 ]LJfiUhg6Jg[nWjPJaE4_0
+Z66 Ik>0_5BLkg5KDUil`bann71
+Z67 VU`_6]HLgXTc<aPM]?;[kG0
+R15
+Z68 w1741297997
+Z69 8D:/study/digital/gp/NTT/HARDWARE/SDF/sdf_8/sdf_top_module_tb.v
+Z70 FD:/study/digital/gp/NTT/HARDWARE/SDF/sdf_8/sdf_top_module_tb.v
+L0 1
+R8
+r1
+31
+Z71 !s90 -reportprogress|300|-work|work|D:/study/digital/gp/NTT/HARDWARE/SDF/sdf_8/sdf_top_module_tb.v|
+R20
+Z72 !s108 1741300219.576000
+Z73 !s107 D:/study/digital/gp/NTT/HARDWARE/SDF/sdf_8/sdf_top_module_tb.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vsdf_top
+!i10b 1
+Z74 !s100 ROmRd[OG>FSEL7aYXZ7az1
+Z75 I?hKD<YY@bGdlW9I9fNTX^2
+Z76 V7EQIDiNfKa2O<`HZEKRmn3
+R4
+Z77 w1741553786
+Z78 8sdf_top_module.v
+Z79 Fsdf_top_module.v
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+o-O0
+vtw_factor_rom
+!i10b 1
+!s100 Fo^GDcE?TQF?B[GQ87^ke0
+IBzUfz>FfbbiC`]TI<SCbN1
+Z80 VR`O0;SkRGcnDem>@`gG<W3
+R4
+w1741554115
+Z81 8tw_factor_rom.v
+Z82 Ftw_factor_rom.v
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+o-O0
