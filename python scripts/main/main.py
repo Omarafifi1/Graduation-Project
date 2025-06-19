@@ -9,7 +9,7 @@ import sympy as sp
 
 
 def main():
-    files_path = "D:/study/digital/gp/NTT/HARDWARE/NTT_INTT/sdf_16/sdf-16-optimized-version/"
+    files_path = D:/study/digital/gp/NTT/HARDWARE/final_project/sdf_16/optimized_ntt_intt/"
     q = int(input("Enter the prime modulus (q): "))
     
     user_input = input("Enter the input vector seperated by spaces : ")
