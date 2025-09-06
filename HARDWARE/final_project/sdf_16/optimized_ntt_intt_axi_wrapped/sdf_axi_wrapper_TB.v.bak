@@ -1,0 +1,285 @@
+module sdf_axi_wrapper_TB #(
+    parameter DATA_WIDTH = 32,
+    parameter ADDR_WIDTH = 6,
+    parameter modulo     = 7681
+);
+    // Global signals
+    reg                            s_axi_aclk_tb;
+    reg                            s_axi_aresetn_tb;
+    
+    // Write address channel
+    reg   [ADDR_WIDTH-1:0]         s_axi_awaddr_tb;
+    reg                            s_axi_awvalid_tb;
+    wire                           s_axi_awready_tb;
+    
+    // Write data channel
+    reg     [DATA_WIDTH-1:0]       s_axi_wdata_tb;
+    //reg   [3:0]                  s_axi_wstrb_tb;
+    reg                            s_axi_wvalid_tb;
+    wire                           s_axi_wready_tb;
+    
+    // Write response channel
+    wire  [1:0]                    s_axi_bresp_tb;
+    wire                           s_axi_bvalid_tb;
+    reg                            s_axi_bready_tb;
+    
+    // Read address channel
+    reg   [ADDR_WIDTH-1:0]         s_axi_araddr_tb;
+    reg                            s_axi_arvalid_tb;
+    wire                           s_axi_arready_tb;
+    
+    // Read data channel
+    wire  [DATA_WIDTH-1:0]         s_axi_rdata_tb;
+    wire  [1:0]                    s_axi_rresp_tb;
+    wire                           s_axi_rvalid_tb;
+    reg                            s_axi_rready_tb ;   
+
+
+
+
+sdf_axi_wrapper #(
+     .DATA_WIDTH(DATA_WIDTH),
+     .ADDR_WIDTH(ADDR_WIDTH),
+     .modulo(modulo)
+)sdf_axi_wrapper(
+
+.s_axi_aclk(s_axi_aclk_tb),
+.s_axi_aresetn(s_axi_aresetn_tb),
+
+.s_axi_awaddr(s_axi_awaddr_tb),
+.s_axi_awvalid(s_axi_awvalid_tb),
+.s_axi_awready(s_axi_awready_tb),
+   
+.s_axi_wdata(s_axi_wdata_tb),
+.s_axi_wvalid(s_axi_wvalid_tb),
+.s_axi_wready(s_axi_wready_tb),
+
+.s_axi_bresp(s_axi_bresp_tb),
+.s_axi_bvalid(s_axi_bvalid_tb),
+.s_axi_bready(s_axi_bready_tb),
+
+.s_axi_araddr(s_axi_araddr_tb),
+.s_axi_arvalid(s_axi_arvalid_tb),
+.s_axi_arready(s_axi_arready_tb),
+
+.s_axi_rdata(s_axi_rdata_tb),
+.s_axi_rresp(s_axi_rresp_tb),
+.s_axi_rvalid(s_axi_rvalid_tb),
+.s_axi_rready(s_axi_rready_tb)   
+);
+
+localparam T=10;
+initial begin
+    s_axi_awvalid_tb=0;
+    s_axi_wvalid_tb=0;
+    s_axi_arvalid_tb=0;
+    s_axi_bready_tb=0;
+    s_axi_rready_tb=0;
+    reset;
+end
+
+initial begin
+    #(T);
+    @(posedge s_axi_aclk_tb);
+    write_address(6'd0);
+
+    write_address(6'd1);
+
+    write_address(6'd2);
+
+    write_address(6'd3);
+
+    write_address(6'd4);
+
+    write_address(6'd5);
+
+    write_address(6'd6);
+
+    write_address(6'd7);
+
+    write_address(6'd8);
+
+    write_address(6'd9);
+
+    write_address(6'd10);
+
+    write_address(6'd11);
+
+    write_address(6'd12);
+
+    write_address(6'd16);
+
+    write_address(6'd14);
+
+    write_address(6'd15);
+
+    write_address(6'd16);
+
+
+
+    wait(sdf_axi_wrapper.done_tick)
+    #(5*T);
+    read_address(6'd0);
+
+    read_address(6'd1);
+  
+    read_address(6'd2);
+ 
+    read_address(6'd3);
+  
+    read_address(6'd4);
+   
+    read_address(6'd5);
+  
+    read_address(6'd6);
+    
+    read_address(6'd7);
+  
+    read_address(6'd8);
+  
+    read_address(6'd9);
+    
+    read_address(6'd10);
+
+    read_address(6'd11);
+   
+    read_address(6'd12);
+   
+    read_address(6'd16);
+    
+    read_address(6'd14);
+   
+    read_address(6'd15);
+ 
+    read_address(6'd17);
+    
+    $stop;
+
+end
+
+initial begin
+    #(T);
+    @(posedge s_axi_aclk_tb);
+    write_data(32'd27);
+
+    write_data(32'd99);
+
+    write_data(32'd35);
+
+    write_data(32'd512);
+
+    write_data(32'd784);
+
+    write_data(32'd865);
+
+    write_data(32'd5021);
+
+    write_data(32'd4875);
+
+    write_data(32'd1245);
+
+    write_data(32'd70);
+
+    write_data(32'd10);
+
+    write_data(32'd20);
+
+    write_data(32'd509);
+
+    write_data(32'd879);
+
+    write_data(32'd635);
+
+    write_data(32'd754);
+
+
+    write_data(32'd5);//101
+end
+
+initial begin
+    #(T);
+    @(posedge s_axi_aclk);
+    write_response(1);
+    read_data(1);
+end
+//////////////////////////////////////////////////////
+//                 clock generation                //
+////////////////////////////////////////////////////
+always 
+begin
+s_axi_aclk_tb=0;
+#(T/2);
+s_axi_aclk_tb=1;
+#(T/2);
+end
+//////////////////////////////////////////////////////
+//                    reset task                   //
+////////////////////////////////////////////////////
+task reset;
+begin
+s_axi_aresetn_tb=0;
+#2;
+s_axi_aresetn_tb=1;
+end
+endtask 
+//////////////////////////////////////////////////////////////
+//                    write address task                   //
+////////////////////////////////////////////////////////////
+task write_address;
+input [ADDR_WIDTH-1:0]write_address;
+begin
+    s_axi_awaddr_tb=write_address;
+    s_axi_awvalid_tb=1;
+    #(3*T);
+    wait(s_axi_awready_tb)
+    s_axi_awvalid_tb=0;
+end
+endtask
+//////////////////////////////////////////////////////////////
+//                     write data task                     //
+////////////////////////////////////////////////////////////
+task write_data;
+input [DATA_WIDTH-1:0]write_data;
+begin
+    s_axi_wdata_tb=write_data;
+    s_axi_wvalid_tb=1;
+    #(3*T);
+    wait(s_axi_wready_tb)
+    s_axi_wvalid_tb=0;
+end
+endtask
+//////////////////////////////////////////////////////////////////
+//                     write response task                     //
+////////////////////////////////////////////////////////////////
+task write_response;
+input bready_signal;
+begin
+    s_axi_bready_tb=bready_signal;
+end
+endtask
+
+///////////////////////////////////////////////////////////
+//                    read address task                 //
+/////////////////////////////////////////////////////////
+task read_address;
+input [ADDR_WIDTH-1:0]read_address;
+begin
+    s_axi_araddr_tb=read_address;
+    s_axi_arvalid_tb=1;
+    #(3*T);
+    wait(s_axi_arready_tb)
+    s_axi_arvalid_tb=0;
+end
+endtask
+
+//////////////////////////////////////////////////////////////
+//                     read data task                      //
+////////////////////////////////////////////////////////////
+task read_data;
+input rready_signal;
+begin
+    s_axi_rready_tb=rready_signal;
+end
+endtask
+
+endmodule

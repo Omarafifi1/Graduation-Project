@@ -1,5 +1,0 @@
-vlib work
-vlog -f source_file.txt
-vsim -voptargs=+accs work.top_tb
-do wave.wlf
-run -all

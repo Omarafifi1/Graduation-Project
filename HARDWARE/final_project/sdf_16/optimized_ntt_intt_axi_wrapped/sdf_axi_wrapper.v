@@ -1,0 +1,223 @@
+module sdf_axi_wrapper #(
+    parameter DATA_WIDTH = 32,
+    parameter ADDR_WIDTH = 5,
+    parameter modulo     = 7681
+)(
+    // Global signals
+    input  wire                         s_axi_aclk,
+    input  wire                         s_axi_aresetn,
+    
+    // Write address channel
+    input  wire [ADDR_WIDTH-1:0]        s_axi_awaddr,
+    input  wire                         s_axi_awvalid,
+    output reg                          s_axi_awready,
+    
+    // Write data channel
+    input  wire [DATA_WIDTH-1:0]        s_axi_wdata,
+    //input  wire [3:0]                 s_axi_wstrb,
+    input  wire                         s_axi_wvalid,
+    output reg                          s_axi_wready,
+    
+    // Write response channel
+    output reg [1:0]                    s_axi_bresp,
+    output reg                          s_axi_bvalid,
+    input  wire                         s_axi_bready,
+    
+    // Read address channel
+    input  wire [ADDR_WIDTH-1:0]        s_axi_araddr,
+    input  wire                         s_axi_arvalid,
+    output reg                          s_axi_arready,
+    
+    // Read data channel
+    output reg [DATA_WIDTH-1:0]         s_axi_rdata,
+    output reg [1:0]                    s_axi_rresp,
+    output reg                          s_axi_rvalid,
+    input  wire                         s_axi_rready     
+);
+//memory_map[0:15]     = data in/out register = sdf_in  or sdf_out
+//memory_map[16]       = control  register    = {ntt_logic_enable , intt_logic_enable , start }
+//memory_map[0]       = status   register    = {done_tick}
+reg [DATA_WIDTH-1:0]memory_map[0:17];
+
+reg [ADDR_WIDTH-1:0]write_address_reg;
+reg [DATA_WIDTH-1:0]write_data_reg;
+reg [ADDR_WIDTH-1:0]read_address_reg;
+reg [DATA_WIDTH-1:0]read_data_reg;
+wire[DATA_WIDTH-1:0]sdf_in ,sdf_out;
+wire ntt_logic_enable , intt_logic_enable , start , data_valid , done_tick ,busy;
+wire [ADDR_WIDTH-1:0]in_address , out_address;
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///                                         wrtite address channel                                       //
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+always @(posedge s_axi_aclk , negedge s_axi_aresetn) begin
+    if(!s_axi_aresetn)begin
+        s_axi_awready<=1'b0;
+    end
+
+    else if(s_axi_awvalid && s_axi_wvalid && !s_axi_awready) begin
+        s_axi_awready<=1'b1;
+    end
+    else begin
+        s_axi_awready<=1'b0;
+    end
+end
+
+always @(posedge s_axi_aclk , negedge s_axi_aresetn) begin
+    if(!s_axi_aresetn)begin
+        write_address_reg<=0;
+    end
+    else if(s_axi_awvalid && s_axi_wvalid && !s_axi_awready)begin
+        write_address_reg<=s_axi_awaddr;
+    end
+end
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///                                         wrtite data channel                                          //
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+always @(posedge s_axi_aclk , negedge s_axi_aresetn) begin
+    if(!s_axi_aresetn)begin
+        s_axi_wready<=1'b0;
+    end
+    else if(s_axi_awvalid && s_axi_wvalid && !s_axi_wready) begin
+        s_axi_wready<=1'b1;
+    end
+    else begin
+        s_axi_wready<=1'b0;
+    end
+end
+
+always @(posedge s_axi_aclk , negedge s_axi_aresetn) begin
+    if(!s_axi_aresetn)begin
+        write_data_reg<=0;
+    end
+    else if(s_axi_awvalid && s_axi_wvalid && s_axi_wready && s_axi_awready)begin
+        write_data_reg<=s_axi_wdata;
+    end
+end
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///                                       wrtite response channel                                        //
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+always @(posedge s_axi_aclk , negedge s_axi_aresetn) begin
+    if(!s_axi_aresetn)begin
+        s_axi_bvalid<=1'b0;
+        s_axi_bresp <=2'd0;
+    end
+    else if(s_axi_awvalid && s_axi_wvalid && s_axi_wready && s_axi_awready && !s_axi_bvalid) begin
+        s_axi_bvalid<=1'b1;
+        s_axi_bresp <=2'd0; //transfer succeeded 
+    end
+    else if(s_axi_bvalid && s_axi_bready) begin 
+        s_axi_bvalid<=1'b0;
+    end
+end
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///                                            read address channel                                      //
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+always @(posedge s_axi_aclk , negedge s_axi_aresetn) begin
+    if(!s_axi_aresetn)begin
+        s_axi_arready<=1'b0;
+    end
+    else if(s_axi_arvalid && !s_axi_arready) begin
+        s_axi_arready<=1'b1;
+    end
+    else begin
+        s_axi_arready<=1'b0;
+    end
+end
+
+
+always @(posedge s_axi_aclk , negedge s_axi_aresetn) begin
+    if(!s_axi_aresetn)begin
+        read_address_reg<=0;
+    end
+    else if(s_axi_arvalid && !s_axi_arready)begin
+        read_address_reg<=s_axi_araddr;
+    end
+end
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///                                             read data channel                                        //
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+always @(posedge s_axi_aclk , negedge s_axi_aresetn) begin
+    if(!s_axi_aresetn)begin
+        s_axi_rvalid<=1'b0;
+        s_axi_rresp <=2'd0;
+    end
+    else if( s_axi_arready && !s_axi_rvalid && memory_map[17][0]) begin
+        s_axi_rvalid<=1'b1;
+        s_axi_rresp <=2'd0; //transfer succeeded 
+    end
+    else if(s_axi_rvalid && s_axi_rready) begin 
+        s_axi_rvalid<=1'b0;
+    end
+end
+
+always @(posedge s_axi_aclk , negedge s_axi_aresetn) begin
+    if(!s_axi_aresetn)begin
+        s_axi_rdata<=0;
+    end
+    else if( s_axi_arready && !s_axi_rvalid)begin
+        s_axi_rdata<=read_data_reg;
+    end
+end
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///                                            memory mapping                                            //
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+assign sdf_in            =memory_map[in_address];
+assign ntt_logic_enable  =memory_map[16][2];
+assign intt_logic_enable =memory_map[16][1];
+assign start             =memory_map[16][0];
+
+integer i;
+always @(posedge s_axi_aclk ,  negedge s_axi_aresetn) begin
+    if(!s_axi_aresetn) begin
+        for ( i = 0;i<(2**ADDR_WIDTH) ;i=i+1 ) begin
+            memory_map[i]<=0;
+        end
+    end
+    else begin
+        if (data_valid && busy) begin
+            memory_map[out_address]<=sdf_out;  
+            if (done_tick) begin
+                memory_map[17][0]<=done_tick;
+            end
+        end 
+        else begin
+            memory_map[write_address_reg]<=write_data_reg;  
+        end
+    end
+end
+always @(posedge s_axi_aclk ,  negedge s_axi_aresetn ) begin
+    if(!s_axi_aresetn) begin
+        read_data_reg<=0;
+    end
+    else begin
+        read_data_reg<=memory_map[read_address_reg];
+    end
+end
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///                                                   Logic                                              //
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+sdf_top #(.data_width(DATA_WIDTH)  , .modulo(modulo) , .address_width(ADDR_WIDTH)  ) sdf_top(
+.sdf_in(sdf_in),
+
+.ntt_logic_enable(ntt_logic_enable),
+.intt_logic_enable(intt_logic_enable), 
+.start(start),
+
+.clk (s_axi_aclk),
+.rst_n (s_axi_aresetn),
+
+.sdf_out(sdf_out),
+
+.done_tick(done_tick),
+.data_valid(data_valid),
+.busy(busy),
+
+.out_address(out_address), 
+.in_address(in_address)
+);
+endmodule

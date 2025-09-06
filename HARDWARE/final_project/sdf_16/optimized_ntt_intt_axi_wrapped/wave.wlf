@@ -1,0 +1,53 @@
+onerror {resume}
+quietly WaveActivateNextPane {} 0
+add wave -noupdate -radix unsigned /sdf_axi_wrapper_TB/sdf_axi_wrapper/s_axi_aclk
+add wave -noupdate -radix unsigned /sdf_axi_wrapper_TB/sdf_axi_wrapper/s_axi_aresetn
+add wave -noupdate -color Magenta -itemcolor Magenta -radix unsigned /sdf_axi_wrapper_TB/sdf_axi_wrapper/s_axi_awaddr
+add wave -noupdate -color Magenta -itemcolor Magenta -radix unsigned /sdf_axi_wrapper_TB/sdf_axi_wrapper/s_axi_awvalid
+add wave -noupdate -color Magenta -itemcolor Magenta -radix unsigned /sdf_axi_wrapper_TB/sdf_axi_wrapper/s_axi_awready
+add wave -noupdate -color {Medium Blue} -itemcolor {Medium Blue} -radix unsigned /sdf_axi_wrapper_TB/sdf_axi_wrapper/s_axi_wdata
+add wave -noupdate -color {Medium Blue} -itemcolor {Medium Blue} -radix unsigned /sdf_axi_wrapper_TB/sdf_axi_wrapper/s_axi_wvalid
+add wave -noupdate -color {Medium Blue} -itemcolor {Medium Blue} -radix unsigned /sdf_axi_wrapper_TB/sdf_axi_wrapper/s_axi_wready
+add wave -noupdate -color Cyan -itemcolor Cyan -radix unsigned /sdf_axi_wrapper_TB/sdf_axi_wrapper/s_axi_bresp
+add wave -noupdate -color Cyan -itemcolor Cyan -radix unsigned /sdf_axi_wrapper_TB/sdf_axi_wrapper/s_axi_bvalid
+add wave -noupdate -color Cyan -itemcolor Cyan -radix unsigned /sdf_axi_wrapper_TB/sdf_axi_wrapper/s_axi_bready
+add wave -noupdate -color Gold -itemcolor Gold -radix unsigned /sdf_axi_wrapper_TB/sdf_axi_wrapper/s_axi_araddr
+add wave -noupdate -color Gold -itemcolor Gold -radix unsigned /sdf_axi_wrapper_TB/sdf_axi_wrapper/s_axi_arvalid
+add wave -noupdate -color Gold -itemcolor Gold -radix unsigned /sdf_axi_wrapper_TB/sdf_axi_wrapper/s_axi_arready
+add wave -noupdate -color Firebrick -itemcolor Firebrick -radix unsigned /sdf_axi_wrapper_TB/sdf_axi_wrapper/s_axi_rdata
+add wave -noupdate -color Firebrick -itemcolor Firebrick -radix unsigned /sdf_axi_wrapper_TB/sdf_axi_wrapper/s_axi_rresp
+add wave -noupdate -color Firebrick -itemcolor Firebrick -radix unsigned /sdf_axi_wrapper_TB/sdf_axi_wrapper/s_axi_rvalid
+add wave -noupdate -color Firebrick -itemcolor Firebrick -radix unsigned /sdf_axi_wrapper_TB/sdf_axi_wrapper/s_axi_rready
+add wave -noupdate -radix unsigned /sdf_axi_wrapper_TB/sdf_axi_wrapper/write_address_reg
+add wave -noupdate -radix unsigned /sdf_axi_wrapper_TB/sdf_axi_wrapper/write_data_reg
+add wave -noupdate -radix unsigned /sdf_axi_wrapper_TB/sdf_axi_wrapper/read_address_reg
+add wave -noupdate -radix unsigned /sdf_axi_wrapper_TB/sdf_axi_wrapper/read_data_reg
+add wave -noupdate -radix unsigned /sdf_axi_wrapper_TB/sdf_axi_wrapper/sdf_in
+add wave -noupdate -radix unsigned /sdf_axi_wrapper_TB/sdf_axi_wrapper/sdf_out
+add wave -noupdate -radix unsigned /sdf_axi_wrapper_TB/sdf_axi_wrapper/ntt_logic_enable
+add wave -noupdate -radix unsigned /sdf_axi_wrapper_TB/sdf_axi_wrapper/intt_logic_enable
+add wave -noupdate -radix unsigned /sdf_axi_wrapper_TB/sdf_axi_wrapper/start
+add wave -noupdate -radix unsigned /sdf_axi_wrapper_TB/sdf_axi_wrapper/data_valid
+add wave -noupdate -radix unsigned /sdf_axi_wrapper_TB/sdf_axi_wrapper/done_tick
+add wave -noupdate -radix unsigned /sdf_axi_wrapper_TB/sdf_axi_wrapper/busy
+add wave -noupdate -radix unsigned /sdf_axi_wrapper_TB/sdf_axi_wrapper/in_address
+add wave -noupdate -radix unsigned /sdf_axi_wrapper_TB/sdf_axi_wrapper/out_address
+add wave -noupdate -radix unsigned /sdf_axi_wrapper_TB/sdf_axi_wrapper/i
+TreeUpdate [SetDefaultTree]
+WaveRestoreCursors {{Cursor 1} {1765 ps} 0}
+quietly wave cursor active 1
+configure wave -namecolwidth 150
+configure wave -valuecolwidth 100
+configure wave -justifyvalue left
+configure wave -signalnamewidth 1
+configure wave -snapdistance 10
+configure wave -datasetprefix 0
+configure wave -rowmargin 4
+configure wave -childrowmargin 2
+configure wave -gridoffset 0
+configure wave -gridperiod 1
+configure wave -griddelta 40
+configure wave -timeline 0
+configure wave -timelineunits sec
+update
+WaveRestoreZoom {0 ps} {1324 ps}

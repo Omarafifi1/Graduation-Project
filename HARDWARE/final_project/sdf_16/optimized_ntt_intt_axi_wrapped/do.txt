@@ -1,0 +1,5 @@
+vlib work
+vlog -f source_file.txt
+vsim -voptargs=+accs work.sdf_axi_wrapper_TB
+do wave.wlf
+run -all

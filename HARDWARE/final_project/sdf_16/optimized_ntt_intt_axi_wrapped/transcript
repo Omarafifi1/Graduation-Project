@@ -1,0 +1,222 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# OpenFile D:/study/digital/gp/NTT/HARDWARE/final_project/sdf_16/optimized_ntt_intt/sdf_axi_wrapper_TB.v 
+do do.txt
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module barret_reduction
+# -- Compiling module bfu
+# -- Compiling module control_unit
+# -- Compiling module delay_buffer
+# -- Compiling module mod_addition_reduction
+# -- Compiling module mod_subtraction_reduction
+# -- Compiling module mux
+# -- Compiling module sdf_single_stage
+# -- Compiling module sdf_top
+# -- Compiling module sdf_tb
+# -- Compiling module tw_factor_rom
+# -- Compiling module sdf_axi_wrapper
+# -- Compiling module sdf_axi_wrapper_TB
+# 
+# Top level modules:
+# 	sdf_tb
+# 	sdf_axi_wrapper_TB
+# vsim -voptargs=+accs work.sdf_axi_wrapper_TB 
+# Loading work.sdf_axi_wrapper_TB
+# Loading work.sdf_axi_wrapper
+# Loading work.sdf_top
+# Loading work.control_unit
+# Loading work.tw_factor_rom
+# Loading work.sdf_single_stage
+# Loading work.bfu
+# Loading work.mux
+# Loading work.mod_addition_reduction
+# Loading work.barret_reduction
+# Loading work.mod_subtraction_reduction
+# Loading work.delay_buffer
+# WARNING: No extended dataflow license exists
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: oafif  Hostname: DESKTOP-SA49AMD  ProcessID: 5796
+# 
+#           Attempting to use alternate WLF file "./wlft92z01f".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlft92z01f
+# 
+# Break in Module sdf_axi_wrapper_TB at sdf_axi_wrapper_TB.v line 216
+# Simulation Breakpoint: Break in Module sdf_axi_wrapper_TB at sdf_axi_wrapper_TB.v line 216
+# MACRO ./do.txt PAUSED at line 5
+do do.txt
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module barret_reduction
+# -- Compiling module bfu
+# -- Compiling module control_unit
+# -- Compiling module delay_buffer
+# -- Compiling module mod_addition_reduction
+# -- Compiling module mod_subtraction_reduction
+# -- Compiling module mux
+# -- Compiling module sdf_single_stage
+# -- Compiling module sdf_top
+# -- Compiling module sdf_tb
+# -- Compiling module tw_factor_rom
+# -- Compiling module sdf_axi_wrapper
+# -- Compiling module sdf_axi_wrapper_TB
+# 
+# Top level modules:
+# 	sdf_tb
+# 	sdf_axi_wrapper_TB
+# vsim -voptargs=+accs work.sdf_axi_wrapper_TB 
+# Loading work.sdf_axi_wrapper_TB
+# Loading work.sdf_axi_wrapper
+# Loading work.sdf_top
+# Loading work.control_unit
+# Loading work.tw_factor_rom
+# Loading work.sdf_single_stage
+# Loading work.bfu
+# Loading work.mux
+# Loading work.mod_addition_reduction
+# Loading work.barret_reduction
+# Loading work.mod_subtraction_reduction
+# Loading work.delay_buffer
+# WARNING: No extended dataflow license exists
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: oafif  Hostname: DESKTOP-SA49AMD  ProcessID: 5796
+# 
+#           Attempting to use alternate WLF file "./wlft03cwdk".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlft03cwdk
+# 
+# Break in Module sdf_axi_wrapper_TB at sdf_axi_wrapper_TB.v line 216
+# Simulation Breakpoint: Break in Module sdf_axi_wrapper_TB at sdf_axi_wrapper_TB.v line 216
+# MACRO ./do.txt PAUSED at line 5
+do do.txt
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module barret_reduction
+# -- Compiling module bfu
+# -- Compiling module control_unit
+# -- Compiling module delay_buffer
+# -- Compiling module mod_addition_reduction
+# -- Compiling module mod_subtraction_reduction
+# -- Compiling module mux
+# -- Compiling module sdf_single_stage
+# -- Compiling module sdf_top
+# -- Compiling module sdf_tb
+# -- Compiling module tw_factor_rom
+# -- Compiling module sdf_axi_wrapper
+# -- Compiling module sdf_axi_wrapper_TB
+# 
+# Top level modules:
+# 	sdf_tb
+# 	sdf_axi_wrapper_TB
+# vsim -voptargs=+accs work.sdf_axi_wrapper_TB 
+# Loading work.sdf_axi_wrapper_TB
+# Loading work.sdf_axi_wrapper
+# Loading work.sdf_top
+# Loading work.control_unit
+# Loading work.tw_factor_rom
+# Loading work.sdf_single_stage
+# Loading work.bfu
+# Loading work.mux
+# Loading work.mod_addition_reduction
+# Loading work.barret_reduction
+# Loading work.mod_subtraction_reduction
+# Loading work.delay_buffer
+# WARNING: No extended dataflow license exists
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: oafif  Hostname: DESKTOP-SA49AMD  ProcessID: 5796
+# 
+#           Attempting to use alternate WLF file "./wlftgakzfx".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlftgakzfx
+# 
+# NTT test case           1 succeeded : expected ==>       6810 , got==>       6810 
+# NTT test case           2 succeeded : expected ==>       7484 , got==>       7484 
+# NTT test case           3 succeeded : expected ==>       4157 , got==>       4157 
+# NTT test case           4 succeeded : expected ==>       2830 , got==>       2830 
+# NTT test case           5 succeeded : expected ==>       6682 , got==>       6682 
+# NTT test case           6 succeeded : expected ==>       7390 , got==>       7390 
+# NTT test case           7 succeeded : expected ==>       3332 , got==>       3332 
+# NTT test case           8 succeeded : expected ==>       6896 , got==>       6896 
+# NTT test case           9 succeeded : expected ==>       3873 , got==>       3873 
+# NTT test case          10 succeeded : expected ==>       3709 , got==>       3709 
+# NTT test case          11 succeeded : expected ==>         39 , got==>         39 
+# NTT test case          12 succeeded : expected ==>       2027 , got==>       2027 
+# NTT test case          13 succeeded : expected ==>       5545 , got==>       5545 
+# NTT test case          14 succeeded : expected ==>       1544 , got==>       1544 
+# NTT test case          15 succeeded : expected ==>       6316 , got==>       6316 
+# NTT test case          16 succeeded : expected ==>        927 , got==>        927 
+# Break in Module sdf_axi_wrapper_TB at sdf_axi_wrapper_TB.v line 216
+# Simulation Breakpoint: Break in Module sdf_axi_wrapper_TB at sdf_axi_wrapper_TB.v line 216
+# MACRO ./do.txt PAUSED at line 5
+do do.txt
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module barret_reduction
+# -- Compiling module bfu
+# -- Compiling module control_unit
+# -- Compiling module delay_buffer
+# -- Compiling module mod_addition_reduction
+# -- Compiling module mod_subtraction_reduction
+# -- Compiling module mux
+# -- Compiling module sdf_single_stage
+# -- Compiling module sdf_top
+# -- Compiling module sdf_tb
+# -- Compiling module tw_factor_rom
+# -- Compiling module sdf_axi_wrapper
+# -- Compiling module sdf_axi_wrapper_TB
+# 
+# Top level modules:
+# 	sdf_tb
+# 	sdf_axi_wrapper_TB
+# vsim -voptargs=+accs work.sdf_axi_wrapper_TB 
+# Loading work.sdf_axi_wrapper_TB
+# Loading work.sdf_axi_wrapper
+# Loading work.sdf_top
+# Loading work.control_unit
+# Loading work.tw_factor_rom
+# Loading work.sdf_single_stage
+# Loading work.bfu
+# Loading work.mux
+# Loading work.mod_addition_reduction
+# Loading work.barret_reduction
+# Loading work.mod_subtraction_reduction
+# Loading work.delay_buffer
+# WARNING: No extended dataflow license exists
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: oafif  Hostname: DESKTOP-SA49AMD  ProcessID: 5796
+# 
+#           Attempting to use alternate WLF file "./wlft12cn0a".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlft12cn0a
+# 
+# INTT test case           1 succeeded : expected ==>         27 , got==>         27 
+# INTT test case           2 succeeded : expected ==>         99 , got==>         99 
+# INTT test case           3 succeeded : expected ==>         35 , got==>         35 
+# INTT test case           4 succeeded : expected ==>        512 , got==>        512 
+# INTT test case           5 succeeded : expected ==>        784 , got==>        784 
+# INTT test case           6 succeeded : expected ==>        865 , got==>        865 
+# INTT test case           7 succeeded : expected ==>       5021 , got==>       5021 
+# INTT test case           8 succeeded : expected ==>       4875 , got==>       4875 
+# INTT test case           9 succeeded : expected ==>       1245 , got==>       1245 
+# INTT test case          10 succeeded : expected ==>         70 , got==>         70 
+# INTT test case          11 succeeded : expected ==>         10 , got==>         10 
+# INTT test case          12 succeeded : expected ==>         20 , got==>         20 
+# INTT test case          13 succeeded : expected ==>        509 , got==>        509 
+# INTT test case          14 succeeded : expected ==>        879 , got==>        879 
+# INTT test case          15 succeeded : expected ==>        635 , got==>        635 
+# INTT test case          16 succeeded : expected ==>        754 , got==>        754 
+# Break in Module sdf_axi_wrapper_TB at sdf_axi_wrapper_TB.v line 216
+# Simulation Breakpoint: Break in Module sdf_axi_wrapper_TB at sdf_axi_wrapper_TB.v line 216
+# MACRO ./do.txt PAUSED at line 5
